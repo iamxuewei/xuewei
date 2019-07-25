@@ -1,0 +1,84 @@
+<div th:fragment="menu">
+<ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+    <li class="nav-item " th:class="${one=='main'?'nav-item start active open':'nav-item'}">
+        <a href="/main/index" class="nav-link nav-toggle">
+            <i class="icon-home"></i>
+            <span class="title">首页</span>
+            <span class="selected"></span>
+        </a>
+    </li>
+    <li class="nav-item" th:class="${one=='data'?'nav-item start active open':'nav-item'}">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-diamond"></i>
+            <span class="title">数据维护</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item" th:class="${two=='crud'?'nav-item active':'nav-item'}">
+                <a href="/crud/index" class="nav-link">
+                    <i class="fa fa-bar-chart"></i> <span class="title">mysql分页</span>
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="ui_general.html" class="nav-link ">
+                    <i class="fa fa-bar-chart"></i> <span class="title">mongodb</span>
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="ui_buttons.html" class="nav-link ">
+                    <i class="fa fa-bar-chart"></i> <span class="title">redis</span>
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="ui_colors.html" class="nav-link ">
+                    <i class="fa fa-bar-chart"></i> <span class="title">redis缓存</span>
+                </a>
+            </li>
+
+        </ul>
+    </li>
+    <li class="nav-item  ">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-diamond"></i>
+            <span class="title">图表展示</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item  ">
+                <a href="ui_colors.html" class="nav-link ">
+                    <i class="fa fa-bar-chart"></i> <span class="title">highcharts</span>
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="ui_general.html" class="nav-link ">
+                    <i class="fa fa-bar-chart"></i>  <span class="title">echarts</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item  " th:class="${one=='sys'?'nav-item start active open':'nav-item'}">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-diamond"></i>
+            <span class="title">系统设置</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item " th:class="${two=='user'?'nav-item active':'nav-item'}">
+                <a href="/user/index" class="nav-link " >
+                    <i class="fa fa-bar-chart"></i> <span class="title">用户管理</span>
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="ui_general.html" class="nav-link ">
+                    <i class="fa fa-bar-chart"></i>  <span class="title">权限管理</span>
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="ui_buttons.html" class="nav-link ">
+                    <i class="fa fa-bar-chart"></i>  <span class="title">菜单管理</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
+</div>

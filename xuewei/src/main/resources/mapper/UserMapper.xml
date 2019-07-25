@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xuewei.mapper.UserMapper">
+
+    <select id="getUserByUserId" resultType="com.xuewei.vo.User" parameterType="java.lang.String">
+        SELECT * FROM  T_USER WHERE userName = #{userName}
+    </select>
+    <select id="getAllUser" resultType="com.xuewei.vo.User">
+        SELECT * FROM  T_USER
+    </select>
+
+
+</mapper>
